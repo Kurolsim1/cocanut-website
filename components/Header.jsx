@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Home, Coffee, ShoppingCart, Info, History } from "lucide-react";
+import { Home, Coffee, ShoppingCart, Info, History, Gift } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 import OrderHistory from "./OrderHistory";
@@ -36,6 +36,13 @@ export default function Header() {
                             title="Menu"
                         >
                             <Coffee size={24} />
+                        </Link>
+                        <Link
+                            href="/giftbox"
+                            className="hover:scale-110 transition-transform hover:text-red-100"
+                            title="Quà tặng"
+                        >
+                            <Gift size={24} />
                         </Link>
 
                         <Link

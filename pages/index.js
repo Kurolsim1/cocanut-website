@@ -5,7 +5,6 @@ import { ChevronDown, ShoppingCart, Droplet } from 'lucide-react';
 // Heroicons
 import { SparklesIcon, CubeTransparentIcon, TruckIcon } from '@heroicons/react/24/outline';
 import IntroAnimation from "../components/IntroAnimation";
-import NewsPromotionsSection from "../components/NewsPromotionsSection";
 
 export default function HomePage() {
     const [expandedFaq, setExpandedFaq] = useState(null);
@@ -115,10 +114,6 @@ export default function HomePage() {
                     </section>
 
                     ---
-                    {/* TIN TỨC & ƯU ĐÃI - THÊM PHẦN NÀY */}
-                    <NewsPromotionsSection />
-
-
                     {/* FAQ SECTION */}
                     <section className="py-20 px-4 bg-red-50">
                         <div className="container mx-auto max-w-3xl">
