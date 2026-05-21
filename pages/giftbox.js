@@ -693,7 +693,7 @@ export default function GiftboxPage() {
                             {items.length === 0 && (
                                 <div
                                     style={{
-                                        position: "absolute",
+                                        position: "relative",
                                         inset: 0,
                                         display: "flex",
                                         alignItems: "center",
@@ -732,7 +732,8 @@ export default function GiftboxPage() {
                                 textAlign: "center",
                             }}
                         >
-                            Không thể đặt vật phẩm lên vùng ly nước
+                            Không thể đặt vật phẩm lên vùng ly nước. <br />
+                            Thiết kế chỉ mang tính minh họa, sản phẩm thực tế có thể khác biệt
                         </p>
                     </div>
 
