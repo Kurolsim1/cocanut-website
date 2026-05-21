@@ -13,16 +13,20 @@ export default function About() {
     return (
         <div className="min-h-screen bg-white">
             {/* HEADER BANNER */}
-            <section className="relative bg-gradient-to-r from-red-600 to-red-500 py-20 px-4">
+            <section className="relative bg-gradient-to-b from-[#8F2D32] via-[#7A2529] to-[#601C1F] min-h-screen flex items-center justify-center py-20 px-4">
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="absolute top-10 right-20 w-40 h-40 bg-red-400/20 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-10 left-20 w-32 h-32 bg-red-700/20 rounded-full blur-3xl"></div>
+                    <div className="absolute top-10 right-20 w-40 h-40 bg-[#601C1F]/20 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-10 left-20 w-32 h-32 bg-[#601C1F]/20 rounded-full blur-3xl"></div>
                 </div>
 
                 <div className="container mx-auto max-w-4xl relative z-10 text-center">
                     <div className="mb-6 flex justify-center">
-                        <div className="bg-white rounded-full p-3 shadow-lg">
-                            <Droplet className="w-12 h-12 text-red-600" fill="currentColor" />
+                        <div className="mb-8">
+                            <img
+                                src="/images/loading.svg"
+                                alt="Loading"
+                                className="w-20 h-20 mx-auto animate-[tickSpin_60s_steps(60)_infinite]"
+                            />
                         </div>
                     </div>
                     <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -38,7 +42,7 @@ export default function About() {
             <section className="py-20 px-4 bg-gray-50">
                 <div className="container mx-auto max-w-4xl">
                     <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-                        <h2 className="text-3xl font-bold text-red-700 mb-6 text-center">
+                        <h2 className="text-3xl font-bold text-[#601C1F] mb-6 text-center">
                             Câu Chuyện Của Chúng Tôi
                         </h2>
 
@@ -86,7 +90,7 @@ export default function About() {
             {/* CONTACT & INFO SECTION */}
             <section className="py-20 px-4 bg-white">
                 <div className="container mx-auto max-w-4xl">
-                    <h2 className="text-3xl font-bold text-red-700 mb-12 text-center">
+                    <h2 className="text-3xl font-bold text-[#601C1F] mb-12 text-center">
                         Thông Tin Liên Hệ
                     </h2>
 
@@ -94,11 +98,11 @@ export default function About() {
                         {/* Địa chỉ */}
                         <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition text-center">
                             <div className="flex justify-center mb-4">
-                                <div className="bg-red-600 rounded-full p-4">
+                                <div className="bg-[#601C1F] rounded-full p-4">
                                     <MapPin className="w-8 h-8 text-white" />
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-red-700 mb-3">Địa Chỉ</h3>
+                            <h3 className="text-xl font-bold text-[#601C1F] mb-3">Địa Chỉ</h3>
                             <p className="text-gray-700 font-medium mb-1">
                                 Cocanut - Đọc là Cô ca nất
                             </p>
@@ -110,11 +114,11 @@ export default function About() {
                         {/* Giờ mở cửa */}
                         <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition text-center">
                             <div className="flex justify-center mb-4">
-                                <div className="bg-red-600 rounded-full p-4">
+                                <div className="bg-[#601C1F] rounded-full p-4">
                                     <Clock className="w-8 h-8 text-white" />
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-red-700 mb-3">Giờ Mở Cửa</h3>
+                            <h3 className="text-xl font-bold text-[#601C1F] mb-3">Giờ Mở Cửa</h3>
                             <p className="text-gray-700 font-medium mb-1">
                                 Thứ 2 - Thứ 7
                             </p>
@@ -126,26 +130,26 @@ export default function About() {
                         {/* Liên hệ */}
                         <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition">
                             <div className="text-center mb-4">
-                                <div className="bg-red-600 rounded-full p-4 inline-flex">
+                                <div className="bg-[#601C1F] rounded-full p-4 inline-flex">
                                     <Phone className="w-8 h-8 text-white" />
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-red-700 mb-3 text-center">Liên Hệ</h3>
+                            <h3 className="text-xl font-bold text-[#601C1F] mb-3 text-center">Liên Hệ</h3>
 
                             <div className="space-y-3">
                                 <a
                                     href="tel:+84343866213"
-                                    className="flex items-center gap-3 text-gray-700 hover:text-red-600 transition font-medium"
+                                    className="flex items-center gap-3 text-gray-700 hover:text-[#601C1F] transition font-medium"
                                 >
-                                    <Phone className="w-5 h-5 text-red-600 flex-shrink-0" />
+                                    <Phone className="w-5 h-5 text-[#601C1F] flex-shrink-0" />
                                     <span>+84 (0)34 386 6213</span>
                                 </a>
 
                                 <a
                                     href="mailto:hello@cocanut.vn"
-                                    className="flex items-center gap-3 text-gray-700 hover:text-red-600 transition font-medium"
+                                    className="flex items-center gap-3 text-gray-700 hover:text-[#601C1F] transition font-medium"
                                 >
-                                    <Mail className="w-5 h-5 text-red-600 flex-shrink-0" />
+                                    <Mail className="w-5 h-5 text-[#601C1F] flex-shrink-0" />
                                     <span>hello@cocanut.vn</span>
                                 </a>
                             </div>
@@ -157,7 +161,7 @@ export default function About() {
             {/* PARTNERS SECTION */}
             <section className="py-20 px-4 bg-gray-50">
                 <div className="container mx-auto max-w-4xl">
-                    <h2 className="text-3xl font-bold text-red-700 mb-12 text-center">
+                    <h2 className="text-3xl font-bold text-[#601C1F] mb-12 text-center">
                         Các Đối Tác Của Chúng Tôi
                     </h2>
 
@@ -180,7 +184,7 @@ export default function About() {
                     </div>
 
                     <div className="mt-12 bg-gradient-to-r from-red-100 to-red-50 rounded-2xl p-8 text-center">
-                        <h3 className="text-xl font-bold text-red-700 mb-2">
+                        <h3 className="text-xl font-bold text-[#601C1F] mb-2">
                             Bạn Muốn Trở Thành Đối Tác Của Cocanut?
                         </h3>
                         <p className="text-gray-700 mb-4">
@@ -188,7 +192,7 @@ export default function About() {
                         </p>
                         <a
                             href="mailto:partnership@cocanut.vn"
-                            className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105"
+                            className="inline-block bg-[#601C1F] hover:bg-[#601C1F] text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105"
                         >
                             Liên Hệ Hợp Tác
                         </a>
@@ -197,7 +201,7 @@ export default function About() {
             </section>
 
             {/* CTA SECTION */}
-            <section className="py-20 px-4 bg-gradient-to-r from-red-600 to-red-500">
+            <section className="py-20 px-4 bg-gradient-to-r from-[#601C1F] to-[#601C1F]">
                 <div className="container mx-auto max-w-3xl text-center">
                     <h2 className="text-4xl font-bold text-white mb-4">
                         Cảm Ơn Bạn Đã Chọn Cocanut
@@ -207,7 +211,7 @@ export default function About() {
                     </p>
                     <a
                         href="/menu"
-                        className="inline-block bg-white text-red-600 px-12 py-4 rounded-full font-bold text-lg hover:bg-red-50 transition transform hover:scale-105"
+                        className="inline-block bg-white text-[#601C1F] px-12 py-4 rounded-full font-bold text-lg hover:bg-red-50 transition transform hover:scale-105"
                     >
                         Xem Menu Ngay
                     </a>

@@ -164,7 +164,7 @@ export default function Menu() {
 
     return (
         <section className="container py-10 max-w-6xl mx-auto px-4">
-            <h1 className="text-4xl font-bold text-red-600 mb-8 text-center">
+            <h1 className="text-4xl font-bold text-[#601C1F] mb-8 text-center">
                 Thực đơn Cocanut
             </h1>
 
@@ -179,7 +179,7 @@ export default function Menu() {
             )}
 
             {error && (
-                <div className="text-center text-red-500 py-12 bg-red-50 rounded-lg">
+                <div className="text-center text-[#601C1F] py-12 bg-red-50 rounded-lg">
                     {error}
                 </div>
             )}
@@ -187,7 +187,7 @@ export default function Menu() {
             {/* Toast thông báo */}
             {toast && (
                 <div
-                    className={`fixed top-5 right-5 flex items-center gap-2 px-4 py-3 rounded-lg shadow-lg z-50 text-white text-sm animate-fade-in ${toast.type === "success" ? "bg-green-500" : "bg-red-500"
+                    className={`fixed top-5 right-5 flex items-center gap-2 px-4 py-3 rounded-lg shadow-lg z-50 text-white text-sm animate-fade-in ${toast.type === "success" ? "bg-green-500" : "bg-[#601C1F]"
                         }`}
                 >
                     {toast.type === "success" ? "✓" : "✕"} {toast.message}
@@ -205,7 +205,7 @@ export default function Menu() {
                                 placeholder="Tìm kiếm sản phẩm..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full pl-10 pr-4 py-3 border-2 border-red-200 rounded-full focus:outline-none focus:border-red-600 transition"
+                                className="w-full pl-10 pr-4 py-3 border-2 border-red-200 rounded-full focus:outline-none focus:border-[#601C1F] transition"
                             />
                         </div>
                     </div>
@@ -218,8 +218,8 @@ export default function Menu() {
                                     key={cat.id}
                                     onClick={() => setActiveCategory(cat.id)}
                                     className={`flex-shrink-0 px-4 py-2 rounded-full font-medium transition whitespace-nowrap ${activeCategory === cat.id
-                                        ? "bg-red-600 text-white shadow-md"
-                                        : "bg-white text-gray-700 border-2 border-gray-300 hover:border-red-600"
+                                        ? "bg-[#601C1F] text-white shadow-md"
+                                        : "bg-white text-gray-700 border-2 border-gray-300 hover:border-[#601C1F]"
                                         }`}
                                 >
                                     {cat.name}
@@ -230,7 +230,7 @@ export default function Menu() {
 
                     {/* Results count */}
                     <div className="mb-6 text-sm text-gray-600">
-                        Tìm thấy <span className="font-semibold text-red-600">{filteredMenu.length}</span> sản phẩm
+                        Tìm thấy <span className="font-semibold text-[#601C1F]">{filteredMenu.length}</span> sản phẩm
                     </div>
 
                     {/* Menu Grid */}
@@ -245,7 +245,7 @@ export default function Menu() {
                                         key={item.id}
                                         className={`p-4 rounded-xl border-2 bg-white shadow-sm hover:shadow-md transition-all flex flex-col ${isOut
                                             ? "opacity-60 border-gray-200"
-                                            : "hover:border-red-400 border-gray-200"
+                                            : "hover:border-[#601C1F] border-gray-200"
                                             }`}
                                     >
                                         {/* Image */}
@@ -263,12 +263,12 @@ export default function Menu() {
                                                 {item.name}
                                             </h3>
                                             <div className="flex items-center justify-between mb-3 mt-auto">
-                                                <span className="text-lg font-bold text-red-600">
+                                                <span className="text-lg font-bold text-[#601C1F]">
                                                     {item.price ? Number(item.price).toLocaleString() : "0"} ₫
                                                 </span>
                                                 <span
                                                     className={`text-xs font-semibold px-2 py-1 rounded-full ${isOut
-                                                        ? "bg-red-100 text-red-600"
+                                                        ? "bg-red-100 text-[#601C1F]"
                                                         : "bg-green-100 text-green-600"
                                                         }`}
                                                 >
@@ -281,7 +281,7 @@ export default function Menu() {
                                                 disabled={isOut}
                                                 className={`w-full py-2 rounded-lg font-medium text-sm transition ${isOut
                                                     ? "border-gray-300 text-gray-400 cursor-not-allowed bg-gray-100"
-                                                    : "bg-red-600 hover:bg-red-700 text-white"
+                                                    : "bg-[#601C1F] hover:bg-red-700 text-white"
                                                     }`}
                                             >
                                                 {isOut ? "Hết rồi" : "Chọn"}
@@ -327,7 +327,7 @@ export default function Menu() {
                                     <h2 className="text-lg font-semibold">
                                         {selectedItem.name}
                                     </h2>
-                                    <p className="text-red-600 font-bold text-xl">
+                                    <p className="text-[#601C1F] font-bold text-xl">
                                         {calculatePopupPrice().toLocaleString()} ₫
                                     </p>
                                     <p className="text-xs text-gray-400">
@@ -482,7 +482,7 @@ export default function Menu() {
                                     })}
 
                                     {custom.error && (
-                                        <div className="flex items-center gap-2 text-red-500 text-sm mt-2">
+                                        <div className="flex items-center gap-2 text-[#601C1F] text-sm mt-2">
                                             ⚠️ {custom.error}
                                         </div>
                                     )}
@@ -510,7 +510,7 @@ export default function Menu() {
                         <div className="border-t p-6 bg-white rounded-b-2xl">
                             <button
                                 onClick={confirmAdd}
-                                className="bg-red-600 hover:bg-red-700 text-white px-4 py-3 rounded-lg w-full font-bold transition"
+                                className="bg-[#601C1F] hover:bg-red-700 text-white px-4 py-3 rounded-lg w-full font-bold transition"
                             >
                                 Thêm vào giỏ
                             </button>

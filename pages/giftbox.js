@@ -477,11 +477,11 @@ export default function GiftboxPage() {
                     textAlign: "center",
                 }}
             >
-                <h1 className="text-4xl font-bold text-red-600 mb-8 text-center">
+                <h1 className="text-4xl font-bold text-[#601C1F] mb-8 text-center">
                     Tạo Hộp Quà Riêng
                 </h1>
 
-                <p className="text-xl italic text-red-600 mb-8 text-center">
+                <p className="text-xl italic text-[#601C1F] mb-8 text-center">
                     Thiết kế hộp quà theo ý bạn
                 </p>
             </div>

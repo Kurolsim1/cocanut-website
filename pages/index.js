@@ -12,17 +12,17 @@ export default function HomePage() {
 
     const features = [
         {
-            icon: <SparklesIcon className="h-12 w-12 mx-auto text-red-600" />,
+            icon: <SparklesIcon className="h-12 w-12 mx-auto text-[#601C1F]" />,
             title: "Nguyên liệu tự nhiên",
             desc: "100% từ nguyên liệu tự nhiên, không hóa chất, không bánh"
         },
         {
-            icon: <CubeTransparentIcon className="h-12 w-12 mx-auto text-red-600" />,
+            icon: <CubeTransparentIcon className="h-12 w-12 mx-auto text-[#601C1F]" />,
             title: "Cold Brew Technology",
             desc: "Công nghệ ủ lạnh, uống ngay không cần pha thêm, lạnh mát tươi sáng"
         },
         {
-            icon: <TruckIcon className="h-12 w-12 mx-auto text-red-600" />,
+            icon: <TruckIcon className="h-12 w-12 mx-auto text-[#601C1F]" />,
             title: "Giao hàng nhanh",
             desc: "15-30 phút tại TP.HCM, miễn phí vận chuyển trong thành phố"
         }
@@ -59,15 +59,19 @@ export default function HomePage() {
                 <div className="min-h-screen bg-white overflow-x-hidden">
 
                     {/* HERO SECTION */}
-                    <section className="relative bg-gradient-to-b from-red-600 to-red-500 min-h-screen flex items-center justify-center px-4 pt-20">
+                    <section className="relative bg-gradient-to-b from-[#8F2D32] via-[#7A2529] to-[#601C1F] min-h-screen flex items-center justify-center px-4 pt-20">
                         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                             <div className="absolute top-20 right-10 w-40 h-40 bg-red-400/20 rounded-full blur-3xl"></div>
                             <div className="absolute bottom-20 left-10 w-32 h-32 bg-red-700/20 rounded-full blur-3xl"></div>
                         </div>
 
                         <div className="relative z-10 text-center max-w-2xl">
-                            <div className="mb-8 animate-bounce">
-                                <Droplet className="w-20 h-20 text-white mx-auto" fill="white" />
+                            <div className="mb-8">
+                                <img
+                                    src="/images/loading.svg"
+                                    alt="Loading"
+                                    className="w-20 h-20 mx-auto animate-[tickSpin_60s_steps(60)_infinite]"
+                                />
                             </div>
 
                             <h1 className="text-6xl md:text-7xl font-bold text-white mb-4 font-['sans-serif'] tracking-tight">
@@ -94,18 +98,17 @@ export default function HomePage() {
                     {/* FEATURES SECTION */}
                     <section className="py-20 px-4 bg-white">
                         <div className="container mx-auto max-w-5xl">
-                            <h2 className="text-4xl font-bold text-center text-red-700 mb-16">
+                            <h2 className="text-4xl font-bold text-center text-[#601C1F] mb-16">
                                 Tại sao chọn Cocanut?
                             </h2>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {features.map((item, idx) => (
                                     <div key={idx} className="bg-red-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition text-center">
-                                        {/* Đã thay thế emoji bằng Heroicons Component */}
                                         <div className="mb-4">
                                             {item.icon}
                                         </div>
-                                        <h3 className="text-xl font-bold text-red-700 mb-2">{item.title}</h3>
+                                        <h3 className="text-xl font-bold text-[#601C1F] mb-2">{item.title}</h3>
                                         <p className="text-gray-600">{item.desc}</p>
                                     </div>
                                 ))}
@@ -117,7 +120,7 @@ export default function HomePage() {
                     {/* FAQ SECTION */}
                     <section className="py-20 px-4 bg-red-50">
                         <div className="container mx-auto max-w-3xl">
-                            <h2 className="text-4xl font-bold text-center text-red-700 mb-12">
+                            <h2 className="text-4xl font-bold text-center text-[#601C1F] mb-12">
                                 Câu hỏi thường gặp
                             </h2>
 
@@ -130,7 +133,7 @@ export default function HomePage() {
                                         >
                                             <span className="text-lg font-semibold text-gray-800">{faq.q}</span>
                                             <ChevronDown
-                                                className={`w-5 h-5 text-red-600 transition transform ${expandedFaq === idx ? 'rotate-180' : ''}`}
+                                                className={`w-5 h-5 text-[#601C1F] transition transform ${expandedFaq === idx ? 'rotate-180' : ''}`}
                                             />
                                         </button>
 
@@ -148,7 +151,7 @@ export default function HomePage() {
                     ---
 
                     {/* CTA SECTION */}
-                    <section className="py-20 px-4 bg-gradient-to-r from-red-600 to-red-500">
+                    <section className="py-20 px-4 bg-gradient-to-b from-[#8F2D32] via-[#7A2529] to-[#601C1F]">
                         <div className="container mx-auto max-w-3xl text-center">
                             <h2 className="text-4xl font-bold text-white mb-4">
                                 Sẵn sàng thưởng thức chưa?
@@ -158,7 +161,7 @@ export default function HomePage() {
                             </p>
                             <Link
                                 href="/menu"
-                                className="bg-white text-red-600 px-12 py-4 rounded-full font-bold text-lg hover:bg-red-50 transition transform hover:scale-105 inline-flex items-center gap-2"
+                                className="bg-white text-[#601C1F] px-12 py-4 rounded-full font-bold text-lg hover:bg-red-50 transition transform hover:scale-105 inline-flex items-center gap-2"
                             >
                                 <ShoppingCart className="w-6 h-6" />
                                 Đặt ngay

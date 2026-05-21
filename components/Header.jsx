@@ -3,6 +3,7 @@ import { Home, Coffee, ShoppingCart, Info, History, Gift } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 import OrderHistory from "./OrderHistory";
+import Image from "next/image";
 
 export default function Header() {
     const { cart } = useCart();
@@ -10,14 +11,21 @@ export default function Header() {
 
     return (
         <>
-            <header className="sticky top-0 left-0 w-full z-50 backdrop-blur-md bg-red-600">
+            <header className="sticky top-0 left-0 w-full z-50 backdrop-blur-md bg-[#8F2D32]">
                 <div className="container mx-auto flex justify-between items-center px-4 py-4">
                     {/* Logo Cocanut */}
-                    <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition">
-                        <div className="flex flex-col">
-                            <span className="font-bold text-2xl text-white tracking-tight">cocanut</span>
-                            <span className="text-xs text-red-100 font-medium -mt-1">CANTY IN CAN</span>
-                        </div>
+                    <Link
+                        href="/"
+                        className="hover:opacity-90 transition flex items-center"
+                    >
+                        <Image
+                            src="/images/footer-04.svg"
+                            alt="Cocanut Logo"
+                            width={220}
+                            height={70}
+                            priority
+                            className="w-[150px] md:w-[190px] h-auto brightness-0 invert"
+                        />
                     </Link>
 
                     {/* Navigation icons */}

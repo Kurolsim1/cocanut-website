@@ -179,7 +179,7 @@ export default function OrderPage() {
 
     return (
         <section className="container py-10 max-w-2xl mx-auto">
-            <h1 className="text-4xl font-bold text-red-600 mb-8 text-center">
+            <h1 className="text-4xl font-bold text-[#601C1F] mb-8 text-center">
                 Đặt hàng
             </h1>
 
@@ -197,7 +197,7 @@ export default function OrderPage() {
                             >
                                 <button
                                     onClick={() => removeItem(item.uniqueId)}
-                                    className="absolute bottom-3 right-3 text-red-500 hover:text-red-700 text-sm"
+                                    className="absolute bottom-3 right-3 text-[#601C1F] hover:text-[#601C1F] text-sm"
                                 >
                                     ❌
                                 </button>
@@ -465,9 +465,9 @@ export default function OrderPage() {
                                 onChange={() => setForm({ ...form, address: "Chi nhánh 1" })}
                                 className="sr-only peer"
                             />
-                            <div className="bg-white border-2 border-gray-300 peer-checked:border-red-600 peer-checked:bg-red-50 rounded-lg p-4 text-sm transition">
+                            <div className="bg-white border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-red-50 rounded-lg p-4 text-sm transition">
                                 <div className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 peer-checked:border-red-600 peer-checked:bg-red-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-[#601C1F] flex items-center justify-center flex-shrink-0 mt-0.5">
                                         {form.address === "Chi nhánh 1" && (
                                             <div className="w-2 h-2 bg-white rounded-full"></div>
                                         )}
@@ -492,9 +492,9 @@ export default function OrderPage() {
                                 onChange={() => setForm({ ...form, address: "Chi nhánh 2" })}
                                 className="sr-only peer"
                             />
-                            <div className="bg-white border-2 border-gray-300 peer-checked:border-red-600 peer-checked:bg-red-50 rounded-lg p-4 text-sm transition">
+                            <div className="bg-white border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-red-50 rounded-lg p-4 text-sm transition">
                                 <div className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 peer-checked:border-red-600 peer-checked:bg-red-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-[#601C1F] flex items-center justify-center flex-shrink-0 mt-0.5">
                                         {form.address === "Chi nhánh 2" && (
                                             <div className="w-2 h-2 bg-white rounded-full"></div>
                                         )}
@@ -550,19 +550,19 @@ export default function OrderPage() {
                 <div className="flex flex-col mt-3">
                     <button
                         disabled={loading}
-                        className="bg-red-600 disabled:opacity-50 text-white px-4 py-2 rounded self-end hover:bg-red-700 transition"
+                        className="bg-[#601C1F] disabled:opacity-50 text-white px-4 py-2 rounded self-end hover:bg-[#601C1F] transition"
                     >
                         {loading ? "Đang gửi..." : "Gửi đơn"}
                     </button>
 
                     {warning && (
-                        <div className="flex items-center gap-2 text-red-500 text-sm mt-3">
+                        <div className="flex items-center gap-2 text-[#601C1F] text-sm mt-3">
                             ⚠️ {warning}
                         </div>
                     )}
                 </div>
 
-                {status?.error && <div className="text-red-600">{status.error}</div>}
+                {status?.error && <div className="text-[#601C1F]">{status.error}</div>}
                 {status?.ok && <div className="text-green-600">{status.ok}</div>}
             </form>
 
@@ -572,7 +572,7 @@ export default function OrderPage() {
                     <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col overflow-hidden">
 
                         {/* Header */}
-                        <div className="bg-gradient-to-r from-red-600 to-red-500 px-6 py-4 flex items-center justify-between">
+                        <div className="bg-gradient-to-r from-[#601C1F] to-[#601C1F] px-6 py-4 flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="bg-white/20 rounded-full p-2">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -617,7 +617,7 @@ export default function OrderPage() {
                             <div className="bg-white border-2 border-red-100 rounded-xl p-5 space-y-3">
                                 <div className="flex items-center gap-2 mb-3">
                                     <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                                        <svg className="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg className="w-5 h-5 text-[#601C1F]" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
                                             <path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
                                         </svg>
@@ -639,13 +639,13 @@ export default function OrderPage() {
                                     <div className="flex justify-between py-2 border-b border-gray-100">
                                         <span className="text-gray-600">Số tài khoản:</span>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-bold text-lg text-red-600 tracking-wider">0977865733</span>
+                                            <span className="font-bold text-lg text-[#601C1F] tracking-wider">0977865733</span>
                                             <button
                                                 onClick={() => {
                                                     navigator.clipboard.writeText('0977865733');
                                                     alert('Đã copy số tài khoản!');
                                                 }}
-                                                className="text-red-600 hover:text-red-700"
+                                                className="text-[#601C1F] hover:text-[#601C1F]"
                                                 title="Copy số tài khoản"
                                             >
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -657,7 +657,7 @@ export default function OrderPage() {
 
                                     <div className="flex justify-between py-2 border-b border-gray-100">
                                         <span className="text-gray-600">Số tiền:</span>
-                                        <span className="font-bold text-xl text-red-600">{subtotal.toLocaleString()}₫</span>
+                                        <span className="font-bold text-xl text-[#601C1F]">{subtotal.toLocaleString()}₫</span>
                                     </div>
                                 </div>
                             </div>
@@ -686,7 +686,7 @@ export default function OrderPage() {
                                                 navigator.clipboard.writeText(`${form.name} ${form.phone} ${bankOrderCode}`);
                                                 alert('Đã copy nội dung chuyển khoản!');
                                             }}
-                                            className="ml-2 text-red-600 hover:text-red-700 flex-shrink-0"
+                                            className="ml-2 text-[#601C1F] hover:text-[#601C1F] flex-shrink-0"
                                             title="Copy nội dung"
                                         >
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
