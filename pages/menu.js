@@ -165,7 +165,7 @@ export default function Menu() {
     return (
         <section className="container py-10 max-w-6xl mx-auto px-4">
             <h1 className="text-4xl font-bold text-[#601C1F] mb-8 text-center">
-                Thực đơn Cocanut
+                Cocanut có gì?
             </h1>
 
             {loading && (

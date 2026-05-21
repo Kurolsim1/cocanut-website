@@ -5,7 +5,6 @@ export default function Footer() {
     return (
         <footer
             className="w-full bg-[#FFFDFA] text-[#111111] overflow-hidden"
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
         >
             {/* Top Line */}
             <div className="px-6 md:px-20 pt-5">
