@@ -381,10 +381,13 @@ export default function OrderPage() {
                     />
                 </div>
 
-                {/* DELIVERY METHOD SELECTION */}
+                {/* DELIVERY METHOD */}
                 <div className="space-y-2 text-sm text-slate-600">
-                    <div className="font-medium">Hình thức nhận hàng:</div>
-                    <div className="flex gap-4 mt-1 items-center">
+                    <div className="font-medium">
+                        Hình thức nhận hàng:
+                    </div>
+
+                    <div className="flex gap-4 mt-1">
                         <label className="flex items-center gap-2 cursor-pointer select-none">
                             <input
                                 type="radio"
@@ -402,16 +405,12 @@ export default function OrderPage() {
                                 name="delivery"
                                 value="PICKUP"
                                 checked={deliveryMethod === "PICKUP"}
-                                onChange={() => {
-                                    setDeliveryMethod("PICKUP");
-                                    setForm({ ...form, address: "" }); // Clear địa chỉ khi chọn pickup
-                                }}
+                                onChange={() => setDeliveryMethod("PICKUP")}
                             />
                             <span>Đến tận nơi để lấy</span>
                         </label>
                     </div>
                 </div>
-
                 {/* ADDRESS - Only show if DELIVERY */}
                 {deliveryMethod === "DELIVERY" && (
                     <div className="space-y-2">
@@ -450,64 +449,40 @@ export default function OrderPage() {
                     </div>
                 )}
 
-                {/* PICKUP INFO - BRANCH SELECTION */}
+                {/* PICKUP INFO */}
                 {deliveryMethod === "PICKUP" && (
                     <div className="space-y-3">
-                        <div className="font-medium text-sm text-slate-600">Chọn chi nhánh lấy hàng:</div>
+                        <div className="font-medium text-sm text-slate-600">
+                            Chi nhánh chính thức:
+                        </div>
 
-                        {/* Branch 1 */}
-                        <label className="block cursor-pointer">
-                            <input
-                                type="radio"
-                                name="branch"
-                                value="branch1"
-                                checked={form.address === "Chi nhánh 1"}
-                                onChange={() => setForm({ ...form, address: "Chi nhánh 1" })}
-                                className="sr-only peer"
-                            />
-                            <div className="bg-white border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-red-50 rounded-lg p-4 text-sm transition">
-                                <div className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-[#601C1F] flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        {form.address === "Chi nhánh 1" && (
-                                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        )}
+                        <div className="bg-white border-2 border-[#601C1F] bg-red-50 rounded-lg p-4 text-sm transition">
+                            <div className="flex items-start gap-3">
+                                <div className="w-5 h-5 rounded-full border-2 border-[#601C1F] bg-[#601C1F] flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                                </div>
+
+                                <div className="flex-1">
+                                    <div className="font-bold text-gray-800 mb-1">
+                                        Chi nhánh chính thức
                                     </div>
-                                    <div className="flex-1">
-                                        <div className="font-bold text-gray-800 mb-1">Chi nhánh 1</div>
-                                        <p className="font-bold text-gray-700 mb-1">Cocanut - Đọc là Cô ca nất</p>
-                                        <p className="text-gray-600 text-xs">202/17A Phạm Văn Hai, Phường Tân Sơn Nhất, TP. Hồ Chí Minh</p>
-                                        <p className="text-gray-600 text-xs mt-2">09:00 - 17:00 (T2 - T7)</p>
-                                    </div>
+
+                                    <p className="font-bold text-gray-700 mb-1">
+                                        Cocanut - Đọc là Cô ca nất
+                                    </p>
+
+                                    <p className="text-gray-600 text-xs">
+                                        202/17A Phạm Văn Hai,
+                                        Phường Tân Sơn Nhất,
+                                        TP. Hồ Chí Minh
+                                    </p>
+
+                                    <p className="text-gray-600 text-xs mt-2">
+                                        09:00 - 17:00 (T2 - T7)
+                                    </p>
                                 </div>
                             </div>
-                        </label>
-
-                        {/* Branch 2 */}
-                        <label className="block cursor-pointer">
-                            <input
-                                type="radio"
-                                name="branch"
-                                value="branch2"
-                                checked={form.address === "Chi nhánh 2"}
-                                onChange={() => setForm({ ...form, address: "Chi nhánh 2" })}
-                                className="sr-only peer"
-                            />
-                            <div className="bg-white border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-red-50 rounded-lg p-4 text-sm transition">
-                                <div className="flex items-start gap-3">
-                                    <div className="w-5 h-5 rounded-full border-2 border-gray-300 peer-checked:border-[#601C1F] peer-checked:bg-[#601C1F] flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        {form.address === "Chi nhánh 2" && (
-                                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        )}
-                                    </div>
-                                    <div className="flex-1">
-                                        <div className="font-bold text-gray-800 mb-1">Chi nhánh 2</div>
-                                        <p className="font-bold text-gray-700 mb-1">COCANUT LONG THÀNH</p>
-                                        <p className="text-gray-600 text-xs">Lý Tự Trọng, Thị trấn Long Thành, Huyện Long Thành, Đồng Nai</p>
-                                        <p className="text-gray-600 text-xs mt-2">07:30 - 22:00 (T2 - CN)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </label>
+                        </div>
                     </div>
                 )}
 

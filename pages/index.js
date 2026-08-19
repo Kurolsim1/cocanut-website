@@ -14,7 +14,7 @@ export default function HomePage() {
         {
             icon: <SparklesIcon className="h-12 w-12 mx-auto text-[#601C1F]" />,
             title: "Nguyên liệu tự nhiên",
-            desc: "100% từ nguyên liệu tự nhiên, không hóa chất, không bánh"
+            desc: "100% từ nguyên liệu tự nhiên, không hóa chất, không chất bảo quản, an toàn cho sức khỏe"
         },
         {
             icon: <CubeTransparentIcon className="h-12 w-12 mx-auto text-[#601C1F]" />,
@@ -24,7 +24,7 @@ export default function HomePage() {
         {
             icon: <TruckIcon className="h-12 w-12 mx-auto text-[#601C1F]" />,
             title: "Giao hàng nhanh",
-            desc: "15-30 phút tại TP.HCM, miễn phí vận chuyển trong thành phố"
+            desc: "15-30 phút tại TP.HCM"
         }
     ];
 
